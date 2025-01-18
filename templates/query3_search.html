@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Query Results</h1>
+
+<p>Total Rows Loaded: {{ NumResults }}</p>  
+
+
+<p>
+  <table>
+    <tr>
+      <th>
+          <b>NumOscars</b>
+      </th>
+    </tr>
+  
+    {% for row in query3_search %}
+    <tr>
+      <td>
+          {{ row['NumOscars'] }}
+      </td>
+    </tr>
+    {% endfor %}
+  
+  </table>
+
+</p>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Nominations</h1>
+
+<table>
+  <tr>
+    <th>
+        <b>NomId</b>
+    </th>
+    <th>
+        <b>Ceremony</b>
+    </th>
+    <th>
+        <b>Category</b>
+    </th>
+    <th>
+        <b>FilmId</b>
+    </th>
+    <th>
+        <b>Winner</b>
+    </th>
+    <th>
+        <b>Detail</b>
+    </th>
+    <th>
+        <b>Note</b>
+    </th>
+    <th>
+        <b>Citation</b>
+    </th>
+    <th>
+        <b>MultifilmNomination</b>
+    </th>
+  </tr>
+
+  {% for row in nominations %}
+  <tr>
+    <td>
+        {{ row['NomId'] }}
+    </td>
+    <td>
+        {{ row['Ceremony'] }}
+    </td>
+    <td>
+        {{ row['Category'] }}
+    </td>
+    <td>
+        {{ row['FilmId'] }}
+    </td>
+    <td>
+        {{ row['Winner'] }}
+    </td>
+    <td>
+        {{ row['Detail'] }}
+    </td>
+    <td>
+        {{ row['Note'] }}
+    </td>
+    <td>
+        {{ row['Citation'] }}
+    </td>
+    <td>
+        {{ row['MultifilmNomination'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

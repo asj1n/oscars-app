@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>NomNominees</h1>
+
+<table>
+  <tr>
+    <th>
+      <b>UnNomineeId</b>
+    </th>
+    <th>
+      <b>NomId</b>
+    </th>
+  </tr>
+
+  {% for row in nomnominees %}
+  <tr>
+    <td>
+      {{ row['UnNomineeId'] }}
+    </td>
+    <td>
+      {{ row['NomId'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

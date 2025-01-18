@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Oscars Database</h1>
+
+<h2>About this App</h2>
+<p>This web application illustrates the use of the Oscars
+    database. The application was built using
+    <a href="https://docs.python.org/3/library/sqlite3.html">sqlite3</a>,
+    <a href="https://flask.palletsprojects.com">Flask</a>, and
+    <a href="https://jinja.palletsprojects.com">Jinja</a>.
+</p>
+
+<br>
+<h2>Relational Diagram</h2>
+<p>To better understand the relation between the elements/tables of this database, here is our <a href = "/diagram/">Relational Diagram</a>.</p>
+
+<br>
+<h2>Tables</h2>
+<p>You may click on a table name to view its contents and explore the structure of our database.</p><br>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Total Entries</th>
+    </tr>
+
+    <tr>
+        <td><a href = "/ceremonies/">Ceremonies</a></td>
+        <td>{{ stats['n_Ceremony'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/categories/">Categories</a></td>
+        <td>{{ stats['n_Class'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/films/">Films</a></td>
+        <td>{{ stats['n_FilmId'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/nominations/">Nominations</a></td>
+        <td>{{ stats['n_NomId'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/nominees/">Nominees</a></td>
+        <td>{{ stats['n_UnNomineeId'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/nomnames/">NomNames</a></td>
+        <td>{{ stats['n_Name'] }}</td>
+    </tr>
+
+    <tr>
+        <td><a href = "/nomnominees/">NomNominees</a></td>
+        <td>{{ stats['n_NomIdAux'] }}</td>
+    </tr>
+
+</table>
+
+
+<br>
+<h2>Queries</h2>
+<p>
+
+<ul>
+    <li><b><a href="/query1/">Que categorias existem em cada classe?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href="/query2/">Quantas categorias existem em cada classe?</a></b></li>
+</ul>
+
+<ul>
+    <li><b>Quantos Oscars ganhou</b>
+    <form name="actorSearch" style="display:inline;" action="javascript:window.open('/query3/' + document.forms['actorSearch'].elements['expr'].value, '_self')">
+        <input name="expr" value="John Williams" required />
+        <input type="submit" value="search" />
+    </form>?</li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query4/"> Qual o ano, a categoria, o nome e o papel desempenhado pelos atores / atrizes que já ganharam algum Oscar?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query5/"> Quais os atores / atrizes que ganharam múltiplos Oscars?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query6/"> Em quantas nomeações teve cada ator / atriz?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query7/"> Que filmes ganharam a categoria canónica 'BEST PICTURE' durante a Segunda Guerra Mundial (1939 - 1945)?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query8/"> Quais as nomeações com 10 ou mais nomeados na mesma nomeação?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query9/"> Quais os filmes que nunca perderam uma nomeação?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query10/"> Quais os filmes que ganharam o maior número de Oscars de sempre?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query11/"> Qual a percentagem de filmes que ganham Oscars?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query12/"> Quais os atores / atrizes que foram nomeados 3 ou mais vezes mas que nunca ganharam um Oscar?</a></b></li>
+</ul>
+
+<ul>
+    <li><b><a href = "/query13/"> Para cada categoria canónica, indique a pessoa nomeada mais vezes, e o número de nomeações.</a></b></li>
+</ul>
+</p>
+
+<br><br><br>
+{% endblock %}\

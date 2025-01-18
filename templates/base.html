@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<title>Oscars Web App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+<link rel = "stylesheet" href = "{{ url_for('static', filename = 'styles.css') }}">
+
+<nav>
+  <a href = "/">Home</a>
+  <br>
+</nav>
+
+<section class = "content">
+  {% block content %}{% endblock %}
+</section>

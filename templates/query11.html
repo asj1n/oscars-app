@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Query Results</h1>
+
+<p>Total Rows Loaded: {{ NumResults }}</p>  
+<br>
+
+<table>
+  <tr>
+    <th>
+        <b>PercentageOfWinners</b>
+    </th>
+  </tr>
+
+  {% for row in query11 %}
+  <tr>
+    <td>
+      {{ row['PercentageOfWinners'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock %}

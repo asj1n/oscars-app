@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Query Results</h1>
+
+<p>Total Rows Loaded: {{ NumResults }}</p>  
+<br>
+
+<table>
+  <tr>
+    <th>
+        <b>CanonicalCategory</b>
+    </th>
+    <th>
+        <b>Nominee</b>
+    </th>
+    <th>
+        <b>Num</b>
+    </th>
+  </tr>
+
+  {% for row in query13 %}
+  <tr>
+    <td>
+      {{ row['CanonicalCategory'] }}
+    </td>
+    <td>
+        {{ row['Nominee'] }}
+    </td>
+    <td>
+        {{ row['Num'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<br><br>
+{% endblock %}

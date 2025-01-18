@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Ceremonies</h1>
+
+<table>
+  <tr>
+    <th>
+      <b>Ceremony</b>
+    </th>
+    <th>
+      <b>Year</b>
+    </th>
+  </tr>
+
+  {% for row in ceremonies %}
+  <tr>
+    <td>
+      {{ row['Ceremony'] }}
+    </td>
+    <td>
+      {{ row['Year'] }}
+    </td>
+  </tr>
+
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

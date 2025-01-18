@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Films</h1>
+
+<table>
+  <tr>
+    <th>
+      <b>FilmId</b>
+    </th>
+    <th>
+      <b>FilmName</b>
+    </th>
+  </tr>
+
+  {% for row in films %}
+  <tr>
+    <td>
+      {{ row['FilmId'] }}
+    </td>
+    <td>
+      {{ row['FilmName'] }}
+    </td>
+  </tr>
+
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

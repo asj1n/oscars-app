@@ -1,0 +1,43 @@
+body {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Fira Code', monospace;
+    font-size: 17px;
+
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(42, 105, 167);
+    text-decoration: underline;
+}
+
+table {
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #d9f1f6;
+}
+
+tr:hover {
+    background-color: #48cae4;
+    font-weight: bold;
+}
+
+th {
+    background-color: #023e8a;
+    color: white;
+}

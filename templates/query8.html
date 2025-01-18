@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Query Results</h1>
+
+<p>Total Rows Loaded: {{ NumResults }}</p>  
+<br>
+
+<table>
+  <tr>
+    <th>
+        <b>Year</b>
+    </th>
+    <th>
+        <b>Category</b>
+    </th>
+    <th>
+        <b>Num</b>
+    </th>
+  </tr>
+
+  {% for row in query8 %}
+  <tr>
+    <td>
+      {{ row['Year'] }}
+    </td>
+    <td>
+        {{ row['Category'] }}
+    </td>
+    <td>
+        {{ row['Num'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

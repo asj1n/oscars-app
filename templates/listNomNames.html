@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>NomNames</h1>
+
+<table>
+  <tr>
+    <th>
+      <b>NomId</b>
+    </th>
+    <th>
+      <b>Name</b>
+    </th>
+  </tr>
+
+  {% for row in nomnames %}
+  <tr>
+    <td>
+        {{ row['NomId'] }}
+    </td>
+    <td>
+      {{ row['Name'] }}
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+<br>
+<br>
+{% endblock %}

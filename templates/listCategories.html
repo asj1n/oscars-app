@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Categories</h1>
+
+<table>
+  <tr>
+    <th>
+        <b>Category</b>
+    </th>
+    <th>
+        <b>CanonicalCategory</b>
+    </th>
+    <th>
+        <b>Class</b>
+    </th>
+  </tr>
+
+  {% for row in categories %}
+  <tr>
+    <td>
+      {{ row['Category'] }}
+    </td>
+    <td>
+        {{ row['CanonicalCategory'] }}
+    </td>
+    <td>
+        {{ row['Class'] }}
+    </td>
+  </tr>
+
+  {% endfor %}
+</table>
+
+<br>
+<br>
+{% endblock %}
