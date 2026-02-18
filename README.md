@@ -5,4 +5,8 @@
 
 <br>
 
-<img src="diagrams/RelationalDiagram.png" alt="erd" width="700" />
+<img width="2404" height="1916" alt="image" src="https://github.com/user-attachments/assets/9294f641-fb55-4f29-b613-4c9057d5f139" />
+<br>
+<br>
+<br>
+<img width="1766" height="1202" alt="image" src="https://github.com/user-attachments/assets/df355707-182c-44bf-b397-5d94167af7b4" />
